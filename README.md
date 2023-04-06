@@ -40,12 +40,12 @@ else:
 
 To make this script as service copy the file to:
 ```
-/usr/local/bin/nvidia-integrated-hybrid_switcher.sh
+/usr/local/bin/nvidia-integrated-hybrid_switcher.py
 ```
 
 Make the script executable by running the following command:
 ```
-$ chmod +x /usr/lib/systemd/system/nvidia-integrated-hybrid_switcher.sh
+$ chmod +x /usr/lib/systemd/system/nvidia-integrated-hybrid_switcher.py
 ```
 
 ```
@@ -61,7 +61,7 @@ Before=getty.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/local/bin/nvidia-integrated-hybrid_switcher.sh
+ExecStart=/usr/bin/python3 /usr/local/bin/nvidia-integrated-hybrid_switcher.py
 
 [Install]
 WantedBy=multi-user.target
