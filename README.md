@@ -3,7 +3,13 @@
 This script checkd at bootup if the monitor is connected.
 If not, then it swich graphic mode to integrated, if else, then the mode is switched to hybrid.
 
-
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
        Boot
          |
 | is monitor pluggeg?|
