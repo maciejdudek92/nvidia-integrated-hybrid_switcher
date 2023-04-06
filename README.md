@@ -5,7 +5,7 @@ If not, then it swich graphic mode to integrated, if else, then the mode is swit
 
 ```mermaid
 flowchart TD
-A[Boot] --> B{Is monitor connected?\nIs charger plugged?};
+A[Boot] --> B{Is monitor connected?};
 B -- Yes --> C[Switch to hybrid mode]
 B -- No --> D[Switch to integrated mode];
 C ----> E[Run system with selected mode];
