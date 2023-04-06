@@ -4,7 +4,7 @@ This script checkd at bootup if the monitor is connected.
 If not, then it swich graphic mode to integrated, if else, then the mode is switched to hybrid.
 
 ```mermaid
-flowchart TD(theme="hand")
+flowchart TD
 A[Boot] --> B{Is monitor connected?};
 B -- Yes --> C[Switch to hybrid mode]
 B -- No --> D[Switch to integrated mode];
