@@ -5,7 +5,7 @@ If not, then it swich graphic mode to integrated, if else, then the mode is swit
 
 ```mermaid
 graph TD;
-Boot-->question: Test;
+Boot-->Tesaaa asas t;
 
     A-->B;
     A-->C;
