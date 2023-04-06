@@ -52,3 +52,6 @@ $ systemctl enable nvidia-integrated-hybrid_switcher.service
 ```
 $ systemctl start nvidia-integrated-hybrid_switcher.service
 ```
+
+## TODO
+- run script on login screen
