@@ -22,8 +22,9 @@ Make the script executable by running the following command:
 ```
 $ chmod +x /usr/lib/systemd/system/nvidia-integrated-hybrid_switcher.sh
 ```
+
 ```
-$ cat /etc/systemd/system/nvidia-integrated-hybrid_switcher.service
+$ nano /etc/systemd/system/nvidia-integrated-hybrid_switcher.service
 ```
 ```
 [Unit]
@@ -35,7 +36,7 @@ Before=getty.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/tmp/script.sh start
+ExecStart=/usr/local/bin/nvidia-integrated-hybrid_switcher.sh
 
 [Install]
 WantedBy=multi-user.target
