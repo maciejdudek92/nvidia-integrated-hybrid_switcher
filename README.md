@@ -23,7 +23,7 @@ To make this script as service copy the file to:
 
 Make the script executable by running the following command:
 ```
-$ chmod +x /usr/lib/systemd/system/nvidia-integrated-hybrid_switcher.py
+$ chmod +x /usr/local/bin/nvidia-integrated-hybrid_switcher.py
 ```
 
 ```
@@ -54,6 +54,3 @@ $ systemctl enable nvidia-integrated-hybrid_switcher.service
 ```
 $ systemctl start nvidia-integrated-hybrid_switcher.service
 ```
-
-## TODO
-- run script on login screen
