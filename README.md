@@ -6,8 +6,9 @@ If not, then it swich graphic mode to integrated, if else, then the mode is swit
 ```mermaid
 flowchart TD
 A[Boot] --> B{Is monitor connected?};
-B -- Yes --> Switch to hybrid mode;
-B -- No --> Switch to integrated mode;
+B -- Yes --> C[Switch to hybrid mode]
+B -- No --> D[Switch to integrated mode];
+
 ```
 
 
