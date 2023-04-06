@@ -12,6 +12,11 @@ C ----> E[Run system with selected mode];
 D ----> E[Run system with selected mode];
 ```
 
+Script itself:
+```
+AAAA
+```
+
 
 
 To make this script as service copy the file to:
