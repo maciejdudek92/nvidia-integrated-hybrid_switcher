@@ -41,3 +41,10 @@ ExecStart=/usr/local/bin/nvidia-integrated-hybrid_switcher.sh
 [Install]
 WantedBy=multi-user.target
 ```
+
+```
+$ systemctl daemon-reload
+```
+```
+$ systemctl enable nvidia-integrated-hybrid_switcher.service
+```
