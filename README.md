@@ -14,7 +14,22 @@ D ----> E[Run system with selected mode];
 
 Script itself:
 ```
-AAAA
+current_mode =  sprawdzić tryb z supergfxctl
+is_monitor_connected = false
+monitors_list = xandr (lista monitorów)
+for monitor in monitors_list:
+  if status == connected:
+    is_monitor_connected = true
+    
+if is_monitor_connected == true:
+  #set mode to hybrid
+else:
+  #set mode to integrated
+  
+  
+    
+ 
+
 ```
 
 
