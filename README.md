@@ -5,6 +5,9 @@ If not, then it swich graphic mode to integrated, if else, then the mode is swit
 
 ```mermaid
 graph TD;
+participant question
+Boot-->question: Test;
+
     A-->B;
     A-->C;
     B-->D;
