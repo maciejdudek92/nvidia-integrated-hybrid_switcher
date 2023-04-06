@@ -15,15 +15,15 @@ If not, then it swich graphic mode to integrated, if else, then the mode is swit
 
 To make this script as service copy the file to:
 ```
-/usr/lib/systemd/system/nvidia-integrated-hybrid_switcher.sh
+/usr/local/bin/nvidia-integrated-hybrid_switcher.sh
 ```
 
 Make the script executable by running the following command:
 ```
-$ chmod +x /usr/local/bin/brightness.sh
+$ chmod +x /usr/lib/systemd/system/nvidia-integrated-hybrid_switcher.sh
 ```
 
-$ cat /etc/systemd/system/run-before-login-prompt.service
+$ cat /etc/systemd/system/nvidia-integrated-hybrid_switcher.service
 ```
 [Unit]
 Description=n nvidia integrated/hybrid switcher
