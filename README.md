@@ -16,28 +16,6 @@ C ----> E[Run system with selected mode];
 D ----> E[Run system with selected mode];
 ```
 
-Script itself:
-```
-current_mode =  sprawdzić tryb z supergfxctl
-is_monitor_connected = false
-monitors_list = xandr (lista monitorów)
-for monitor in monitors_list:
-  if status == connected:
-    is_monitor_connected = true
-    
-if is_monitor_connected == true:
-  #set mode to hybrid
-else:
-  #set mode to integrated
-  
-  
-    
- 
-
-```
-
-
-
 To make this script as service copy the file to:
 ```
 /usr/local/bin/nvidia-integrated-hybrid_switcher.py
