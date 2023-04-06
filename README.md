@@ -1,5 +1,9 @@
 # NVIDIA integrated/hybrid mode switcher
 
+## Requirements
+- hwinfo
+
+## Description
 This script checkd at bootup if the monitor is connected.
 If not, then it swich graphic mode to integrated, if else, then the mode is switched to hybrid.
 
