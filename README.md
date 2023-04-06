@@ -48,3 +48,6 @@ $ systemctl daemon-reload
 ```
 $ systemctl enable nvidia-integrated-hybrid_switcher.service
 ```
+```
+$ systemctl start nvidia-integrated-hybrid_switcher.service
+```
