@@ -8,7 +8,8 @@ flowchart TD
 A[Boot] --> B{Is monitor connected?};
 B -- Yes --> C[Switch to hybrid mode]
 B -- No --> D[Switch to integrated mode];
-
+C ----> E[Run system with selected mode];
+D ----> E[Run system with selected mode];
 ```
 
 
