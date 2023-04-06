@@ -22,8 +22,9 @@ Make the script executable by running the following command:
 ```
 $ chmod +x /usr/lib/systemd/system/nvidia-integrated-hybrid_switcher.sh
 ```
-
+```
 $ cat /etc/systemd/system/nvidia-integrated-hybrid_switcher.service
+```
 ```
 [Unit]
 Description=n nvidia integrated/hybrid switcher
