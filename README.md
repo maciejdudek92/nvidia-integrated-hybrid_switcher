@@ -14,7 +14,7 @@ B -- Yes --> C[Switch to hybrid mode]
 B -- No --> D[Switch to integrated mode];
 C ----> E[Run system with selected mode];
 D ----> E[Run system with selected mode];
-``
+```
 
 
 To make this script as service copy the file to:
