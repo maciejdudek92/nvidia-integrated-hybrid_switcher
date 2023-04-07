@@ -14,7 +14,8 @@ B -- Yes --> C[Switch to hybrid mode]
 B -- No --> D[Switch to integrated mode];
 C ----> E[Run system with selected mode];
 D ----> E[Run system with selected mode];
-```
+``
+
 
 To make this script as service copy the file to:
 ```
@@ -31,7 +32,7 @@ $ nano /etc/systemd/system/nvidia-integrated-hybrid_switcher.service
 ```
 ```
 [Unit]
-Description=n nvidia integrated/hybrid switcher
+Description=nvidia integrated/hybrid switcher
 After=systemd-user-sessions.service plymouth-quit-wait.service
 After=rc-local.service
 Before=getty.target
