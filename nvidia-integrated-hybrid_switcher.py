@@ -1,6 +1,5 @@
 import subprocess
 
-
 def screens():
     command = subprocess.run(
         "hwinfo --monitor | grep -E 'Model:'",
@@ -17,7 +16,6 @@ def screens():
         monitors.append(model_line)
     return monitors
 
-
 def set_graphic_mode(mode: str):
     """Integrated, Hybrid"""
     return subprocess.run(
@@ -27,15 +25,37 @@ def set_graphic_mode(mode: str):
         text=True,
     ).stdout
     
-set_graphic_mode("Hybrid")
+def stop_supergfxd():
+    """Integrated, Hybrid"""
+    return subprocess.run(
+        "systemctl stop supergfxd.service",
+        shell=True,
+        capture_output=True,
+        text=True,
+    )  
+  
+def get_vga_controllers():
+    command = subprocess.run(
+    "lspci | grep VGA",
+    shell=True,
+    capture_output=True,
+    text=True,
+)
+    vga_controllers = [l for l in command.stdout.splitlines()]
+    print(vga_controllers)
+    return len(vga_controllers)
 
-is_monitor_connected = False
-screens = screens()
-screens_count = len(screens)
+if get_vga_controllers() > 1:
+    set_graphic_mode("Hybrid")
 
+    is_monitor_connected = False
+    screens = screens()
+    screens_count = len(screens)
 
-if screens_count > 1:
-    is_monitor_connected = True
-    
-if not is_monitor_connected:
-    set_graphic_mode("Integrated")
+    if screens_count > 1:
+        is_monitor_connected = True
+        
+    if not is_monitor_connected:
+        set_graphic_mode("Integrated")
+else:
+    stop_supergfxd()
