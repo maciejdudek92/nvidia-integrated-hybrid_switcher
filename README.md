@@ -21,12 +21,14 @@ To make this script as service copy the file to:
 ```
 /usr/local/bin/nvidia-integrated-hybrid_switcher.py
 or
-/usr/local/bin/nvidia-integrated-hybrid_switcher.sh
+/usr/local/bin/graphic_mode.sh
 ```
 
 Make the script executable by running the following command:
 ```
 $ chmod +x /usr/local/bin/nvidia-integrated-hybrid_switcher.py
+or
+$ chmod +x /usr/local/bin//usr/local/bin/graphic_mode.sh
 ```
 
 Create new service file
@@ -37,7 +39,7 @@ $ nano /etc/systemd/system/nvidia-integrated-hybrid_switcher.service
 Paste follwing lines:
 ```
 [Unit]
-Description=nvidia integrated/hybrid switcher
+Description=graphic mode switcher
 After=systemd-user-sessions.service plymouth-quit-wait.service
 After=rc-local.service
 Before=getty.target
