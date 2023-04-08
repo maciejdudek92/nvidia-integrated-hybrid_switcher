@@ -19,9 +19,10 @@ D ----> E[Run system with selected mode];
 
 To make this script as service copy the file to:
 ```
-/usr/local/bin/nvidia-integrated-hybrid_switcher.py
+sudo cp nvidia-integrated-hybrid_switcher.py /usr/local/bin/nvidia-integrated-hybrid_switcher.py
 or
-/usr/local/bin/graphic_mode.sh
+sudo cp graphic_mode.sh /usr/local/bin/graphic_mode.sh
+
 ```
 
 Make the script executable by running the following command:
