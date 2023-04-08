@@ -65,4 +65,4 @@ $ systemctl enable graphic_mode_switcher.service
 Start Service
 ```
 $ systemctl start graphic_mode_switcher.service
-```
+``` 
