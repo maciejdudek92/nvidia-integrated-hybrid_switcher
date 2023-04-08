@@ -20,6 +20,8 @@ D ----> E[Run system with selected mode];
 To make this script as service copy the file to:
 ```
 /usr/local/bin/nvidia-integrated-hybrid_switcher.py
+or
+/usr/local/bin/nvidia-integrated-hybrid_switcher.sh
 ```
 
 Make the script executable by running the following command:
@@ -27,9 +29,12 @@ Make the script executable by running the following command:
 $ chmod +x /usr/local/bin/nvidia-integrated-hybrid_switcher.py
 ```
 
+Create new service file
 ```
 $ nano /etc/systemd/system/nvidia-integrated-hybrid_switcher.service
 ```
+
+Paste follwing lines:
 ```
 [Unit]
 Description=nvidia integrated/hybrid switcher
@@ -46,12 +51,15 @@ ExecStart=/usr/bin/python3 /usr/local/bin/nvidia-integrated-hybrid_switcher.py
 WantedBy=multi-user.target
 ```
 
+Reload services deamon
 ```
 $ systemctl daemon-reload
 ```
+Enable service
 ```
 $ systemctl enable nvidia-integrated-hybrid_switcher.service
 ```
+Start Service
 ```
 $ systemctl start nvidia-integrated-hybrid_switcher.service
 ```
